@@ -69,7 +69,6 @@ const ChatComponent = ({
     );
   };
   const imagesView = (images) => {
-    console.log('resimler');
     return (
       <FlatList
         style={Styles.imagesFlatList}
