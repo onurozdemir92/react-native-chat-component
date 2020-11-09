@@ -1,5 +1,8 @@
 # react-native-chat-component
-![chat2](https://user-images.githubusercontent.com/28515389/98550209-e06ea900-22ac-11eb-8570-782fd8e3dcc8.PNG)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/28515389/98550209-e06ea900-22ac-11eb-8570-782fd8e3dcc8.PNG">
+</p>
+
 
 # Installation
 
