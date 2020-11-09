@@ -1,6 +1,6 @@
 # react-native-chat-component
 
-#Installation
+# Installation
 
 npm: npm install --save react-native-chat-component
 
