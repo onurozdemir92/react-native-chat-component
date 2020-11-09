@@ -100,6 +100,23 @@ const Example = () => {
 
 export default Example;
 ```
+## Props
+| Name | Type | Description |
+| :---         |     :---:      |          ---: |
+| data   | Array     | message data    |
+| textInputShow     | Bool       | Text input visible      |
+| onSend     |(message)=>onSend(message[0].text)      | Text input value      |
+| tickViewShow     | Bool       | message state visible      |
+| user     | Array       | user={{id:1}}      |
+| backgroundImage     | Source       | Background Image     |
+| PostButtonView     | Bool       | Post Button Visible     |
+| onClickDocument     | ------     | Document Click     |
+| onClickVideo     | ------       | Video Click     |
+| onPostClick     | ------       | Post Button Click     |
+| onDeleteMessage     | ------       | Message delete button Click     |
+| onSystemMessage     | ------       | System message button Click     |
+| onfavoriteMessage     | ------       | Message favorite button Click     |
+| writing     | Bool       | writing     |
 
 ## License
 
