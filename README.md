@@ -1,10 +1,11 @@
 # react-native-chat-component
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/28515389/98550209-e06ea900-22ac-11eb-8570-782fd8e3dcc8.PNG">
 </p>
 
-
 ## Installation
+
 ```bash
 npm install --save react-native-chat-component
 
@@ -12,19 +13,19 @@ yarn add react-native-chat-component
 ```
 
 ## Example
+
 ```javascript
 import React, {useEffect, useState} from 'react';
 import {ChatComponent, ChatAppend} from 'react-native-chat-component';
 
 const Example = () => {
   const firstData = [
-   
     {
       id: 1,
       text: 'Hi!',
       tick: '1',
-      transmitted:true,
-      annoucement:true,
+      transmitted: true,
+      annoucement: true,
       favorite: true,
       createdAt: '20:15',
       user: {_id: 1},
@@ -55,20 +56,20 @@ const Example = () => {
           image:
             'https://images.unsplash.com/photo-1541298645675-6cc8e127934d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
         },
-       
       ],
       createdAt: '20:13',
       user: {_id: 2},
     },
     {
-        id: 1,
-        text: '...',
-        tick: '4',
-        image:'https://images.unsplash.com/photo-1462027076063-1ceabb252dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-        favorite: true,
-        createdAt: '20:13',
-        user: {_id: 1},
-      },
+      id: 1,
+      text: '...',
+      tick: '4',
+      image:
+        'https://images.unsplash.com/photo-1462027076063-1ceabb252dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      favorite: true,
+      createdAt: '20:13',
+      user: {_id: 1},
+    },
   ];
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -98,8 +99,8 @@ const Example = () => {
 };
 
 export default Example;
-
-
 ```
+
 ## License
-[ISC](https://choosealicense.com/licenses/isc/)
+
+[MIT](https://choosealicense.com/licenses/mit/)
