@@ -1,6 +1,6 @@
 {
   "name": "react-native-chat-component",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "it was developed for use in communication applications, chat screens.",
   "main": "index.js",
   "scripts": {
