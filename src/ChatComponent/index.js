@@ -40,6 +40,7 @@ const ChatComponent = ({
   backgroundImage,
   writing,
 }) => {
+
   const [text, setText] = useState();
   const [item, setItem] = useState();
   const [messageState, setMessageState] = useState(false);
@@ -47,7 +48,11 @@ const ChatComponent = ({
   const [imageShowState, setImageShowState] = useState(false);
   const [postShowState, setpostShowState] = useState(false);
   const [showItemImage, setShowItemImage] = useState();
-
+const ChatAppend=(Data,NewData)=>{
+Data=Data.reverse();
+Data.push(NewData);
+return Data.reverse();
+}
   const tickView = (tick) => {
     if (!tickViewShow) return null;
     if (tick === '0') return null;
@@ -488,4 +493,4 @@ const ChatComponent = ({
   );
 };
 
-export default ChatComponent;
+export {ChatComponent,ChatAppend};
