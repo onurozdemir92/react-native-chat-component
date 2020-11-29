@@ -37,6 +37,9 @@ const ChatComponent = ({
   onPostClick,
   PostButtonView,
   tickViewShow,
+  quickRepliesRightColor,
+  quickRepliesLeftColor,
+  onQuickReplies,
   backgroundImage,
   writing,
 }) => {
@@ -101,6 +104,22 @@ const ChatComponent = ({
           />
         </View>
       </TouchableWithoutFeedback>
+    );
+  };
+  const quickRepliesView = (quickReplies,position) => {
+    return (
+      <View style={Styles.quickRepliesContainer}>
+        {quickReplies.map((item, index) => (
+          <TouchableOpacity
+            key={index}
+            onPress={() => onQuickReplies(item)}
+            style={[Styles.quickRepliesButton, {borderColor:position=='left'?quickRepliesLeftColor:quickRepliesRightColor}]}>
+            <Text style={[Styles.quickRepliesText, {color: position=='left'?quickRepliesLeftColor:quickRepliesRightColor}]}>
+              {item.text}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </View>
     );
   };
   const messageSettings = () => {
@@ -288,6 +307,7 @@ const ChatComponent = ({
             <Text style={[Styles.bubleText, {color: '#959494'}]}>
               {item.text}
             </Text>
+            {item.quickReplies ? quickRepliesView(item.quickReplies,'left') : null}
             <View style={Styles.infoContainer}>
               <View style={Styles.flex} />
 
@@ -357,6 +377,7 @@ const ChatComponent = ({
             <Text style={[Styles.bubleText, {color: 'white'}]}>
               {item.text}
             </Text>
+            {item.quickReplies ? quickRepliesView(item.quickReplies,'right') : null}
             <View style={Styles.infoContainer}>
               {item.annoucement ? (
                 <Foundation name={'megaphone'} color={'rgba(0,0,0,.3)'} />

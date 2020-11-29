@@ -28,6 +28,23 @@ const Styles = StyleSheet.create({
   textInputContainer: {
     flex: 1,
   },
+  quickRepliesButton:{
+    width:'80%',
+    borderColor:'#ccc',
+    borderWidth:1,
+    borderRadius:30,
+    justifyContent:'center',
+    alignItems:'center',
+    padding:5,
+    marginTop:8
+  },
+  quickRepliesText:{
+
+  },
+  quickRepliesContainer:{
+    alignItems:'center',
+    justifyContent:'center'
+      },
   writingContainer:{
 backgroundColor:'white',
 borderRadius:30,
