@@ -40,7 +40,6 @@ const ChatComponent = ({
   backgroundImage,
   writing,
 }) => {
-
   const [text, setText] = useState();
   const [item, setItem] = useState();
   const [messageState, setMessageState] = useState(false);
@@ -48,11 +47,7 @@ const ChatComponent = ({
   const [imageShowState, setImageShowState] = useState(false);
   const [postShowState, setpostShowState] = useState(false);
   const [showItemImage, setShowItemImage] = useState();
-const ChatAppend=(Data,NewData)=>{
-Data=Data.reverse();
-Data.push(NewData);
-return Data.reverse();
-}
+
   const tickView = (tick) => {
     if (!tickViewShow) return null;
     if (tick === '0') return null;
@@ -118,21 +113,6 @@ return Data.reverse();
               Styles.settingsContainer,
               {backgroundColor: messagePosition == 'r' ? '#1cafff' : 'white'},
             ]}>
-            {/* yanıtlama Özelliği için */}
-            {/* <TouchableOpacity style={Styles.settingButton}>
-              <Text
-                style={[
-                  Styles.settingButtonText,
-                  {color: messagePosition == 'r' ? 'white' : Colors.NameColor},
-                ]}>
-                Yanıtla
-              </Text>
-              <AntDesign
-                style={Styles.settingButtonIcon}
-                color={messagePosition == 'r' ? 'white' : Colors.NameColor}
-                name="back"
-              />
-            </TouchableOpacity> */}
             <TouchableOpacity
               onPress={() => {
                 onfavoriteMessage(item);
@@ -163,8 +143,7 @@ return Data.reverse();
                   style={[
                     Styles.settingButtonText,
                     {
-                      color:
-                        messagePosition == 'r' ? 'white' : '#979797',
+                      color: messagePosition == 'r' ? 'white' : '#979797',
                     },
                   ]}>
                   Metin Kopyala
@@ -176,21 +155,7 @@ return Data.reverse();
                 />
               </TouchableOpacity>
             ) : null}
-            {/* ilet özelliği için */}
-            {/* <TouchableOpacity style={Styles.settingButton}>
-              <Text
-                style={[
-                  Styles.settingButtonText,
-                  {color: messagePosition == 'r' ? 'white' : Colors.NameColor},
-                ]}>
-                ilet
-              </Text>
-              <AntDesign
-                style={Styles.settingButtonIcon}
-                color={messagePosition == 'r' ? 'white' : Colors.NameColor}
-                name="arrowright"
-              />
-            </TouchableOpacity> */}
+
             <TouchableOpacity
               onPress={() => {
                 onDeleteMessage(item);
@@ -405,9 +370,7 @@ return Data.reverse();
               ) : null}
 
               <View style={Styles.flex} />
-              <Text style={Styles.timeText}>
-                {item.createdAt}
-              </Text>
+              <Text style={Styles.timeText}>{item.createdAt}</Text>
               {item.tick != undefined ? tickView(item.tick) : null}
             </View>
           </View>
@@ -455,7 +418,7 @@ return Data.reverse();
               <View style={Styles.textInput}>
                 <TextInput
                   value={text}
-                  onChangeText={e => setText(e)}
+                  onChangeText={(e) => setText(e)}
                   multiline={true}
                   placeholder={textInputPlaceholder}
                 />
@@ -493,4 +456,4 @@ return Data.reverse();
   );
 };
 
-export {ChatComponent,ChatAppend};
+export default ChatComponent;
