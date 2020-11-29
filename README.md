@@ -30,7 +30,17 @@ const Example = () => {
       createdAt: '20:15',
       user: {_id: 1},
     },
-    {id: 1, text: 'Hi!', tick: '1', createdAt: '20:14', user: {_id: 2}},
+    {
+      id: 1,
+      text: 'Hi!',
+      tick: '1',
+      createdAt: '20:14',
+      user: {_id: 2},
+      quickReplies: [
+        {text: 'Google', url: 'www.google.com'},
+        {text: 'Facebook', url: 'www.facebook.com'},
+      ],
+    },
     {
       id: 1,
       text: '...',
@@ -59,6 +69,10 @@ const Example = () => {
       ],
       createdAt: '20:13',
       user: {_id: 2},
+      quickReplies: [
+        {text: 'Google', url: 'www.google.com'},
+        {text: 'Facebook', url: 'www.facebook.com'},
+      ],
     },
     {
       id: 1,
@@ -87,6 +101,9 @@ const Example = () => {
       tickViewShow={true}
       chatColor={'#1cafff'}
       user={{id: 1}}
+      quickRepliesRightColor={'white'}
+      quickRepliesLeftColor={'#1cafff'}
+      onQuickReplies={(value) => console.log(value)}
       backgroundImage={{
         uri:
           'https://images.unsplash.com/photo-1569173112611-52a7cd38bea9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
@@ -100,23 +117,28 @@ const Example = () => {
 
 export default Example;
 ```
+
 ## Props
-| Name | Type | Description |
-| :---         |     :---:      |          ---: |
-| data   | Array     | message data    |
-| textInputShow     | Bool       | Text input visible      |
-| onSend     |(message)=>onSend(message[0].text)      | Text input value      |
-| tickViewShow     | Bool       | message state visible      |
-| user     | Array       | user={{id:1}}      |
-| backgroundImage     | Source       | Background Image     |
-| PostButtonView     | Bool       | Post Button Visible     |
-| onClickDocument     | ------     | Document Click     |
-| onClickVideo     | ------       | Video Click     |
-| onPostClick     | ------       | Post Button Click     |
-| onDeleteMessage     | ------       | Message delete button Click     |
-| onSystemMessage     | ------       | System message button Click     |
-| onfavoriteMessage     | ------       | Message favorite button Click     |
-| writing     | Bool       | writing     |
+
+| Name                   |                Type                |                 Description |
+| :--------------------- | :--------------------------------: | --------------------------: |
+| data                   |               Array                |                message data |
+| textInputShow          |                Bool                |          Text input visible |
+| onSend                 | (message)=>onSend(message[0].text) |            Text input value |
+| tickViewShow           |                Bool                |       message state visible |
+| user                   |               Array                |               user={{id:1}} |
+| backgroundImage        |               Source               |            Background Image |
+| PostButtonView         |                Bool                |         Post Button Visible |
+| quickRepliesRightColor |               Color                |    quickReplies Right Color |
+| quickRepliesLeftColor  |               Color                |     quickReplies Left Color |
+| onClickDocument        |               ------               |              Document Click |
+| onClickVideo           |               ------               |                 Video Click |
+| onPostClick            |               ------               |           Post Button Click |
+| onDeleteMessage        |               ------               | Message delete button Click |
+| onSystemMessage        |               ------               | System message button Click |
+| onSystemMessage        |               ------               | System message button Click |
+| onQuickReplies         |               ------               | onQuickReplies button Click |
+| writing                |                Bool                |                     writing |
 
 ## License
 
