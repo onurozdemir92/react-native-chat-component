@@ -131,13 +131,13 @@ export default Example;
 | PostButtonView         |                Bool                |         Post Button Visible |
 | quickRepliesRightColor |               Color                |    quickReplies Right Color |
 | quickRepliesLeftColor  |               Color                |     quickReplies Left Color |
-| onClickDocument        |               ------               |              Document Click |
-| onClickVideo           |               ------               |                 Video Click |
-| onPostClick            |               ------               |           Post Button Click |
-| onDeleteMessage        |               ------               | Message delete button Click |
-| onSystemMessage        |               ------               | System message button Click |
-| onSystemMessage        |               ------               | System message button Click |
-| onQuickReplies         |               ------               | onQuickReplies button Click |
+| onClickDocument        |              Function              |              Document Click |
+| onClickVideo           |              Function              |                 Video Click |
+| onPostClick            |              Function              |           Post Button Click |
+| onDeleteMessage        |              Function              | Message delete button Click |
+| onSystemMessage        |              Function              | System message button Click |
+| onSystemMessage        |              Function              | System message button Click |
+| onQuickReplies         |              Function              | onQuickReplies button Click |
 | writing                |                Bool                |                     writing |
 
 ## License
