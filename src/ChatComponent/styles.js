@@ -94,7 +94,7 @@ color:'rgba(0,0,0,.5)'
   transmittedText:{
 color:'white'
   },
-  bubleItemContainer: {
+  bubbleItemContainer: {
     minWidth: '30%',
     maxWidth: '75%',
     
@@ -111,7 +111,7 @@ color:'white'
     marginRight: 5,
     color: 'white',
   },
-  bubleText: {
+  bubbleText: {
     textAlign: 'left',
     margin:5
   },
