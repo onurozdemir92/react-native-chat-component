@@ -314,7 +314,7 @@ const ChatComponent = ({
               <Text style={[Styles.timeText, {color: '#959494'}]}>
                 {item.createdAt}
               </Text>
-              {item.annoucement ? (
+              {item.announcement ? (
                 <Foundation
                   name={'megaphone'}
                   style={Styles.infoItem}
@@ -379,7 +379,7 @@ const ChatComponent = ({
             </Text>
             {item.quickReplies ? quickRepliesView(item.quickReplies,'right') : null}
             <View style={Styles.infoContainer}>
-              {item.annoucement ? (
+              {item.announcement ? (
                 <Foundation name={'megaphone'} color={'rgba(0,0,0,.3)'} />
               ) : null}
               {item.favorite ? (
