@@ -33,7 +33,7 @@ const ChatComponent = ({
   user,
   onSystemMessage,
   onDeleteMessage,
-  onfavoriteMessage,
+  onFavoriteMessage,
   onPostClick,
   PostButtonView,
   tickViewShow,
@@ -46,9 +46,9 @@ const ChatComponent = ({
   const [text, setText] = useState();
   const [item, setItem] = useState();
   const [messageState, setMessageState] = useState(false);
-  const [messagePosition, setMessageposition] = useState();
+  const [messagePosition, setMessagePosition] = useState();
   const [imageShowState, setImageShowState] = useState(false);
-  const [postShowState, setpostShowState] = useState(false);
+  const [postShowState, setPostShowState] = useState(false);
   const [showItemImage, setShowItemImage] = useState();
 
   const tickView = (tick) => {
@@ -134,7 +134,7 @@ const ChatComponent = ({
             ]}>
             <TouchableOpacity
               onPress={() => {
-                onfavoriteMessage(item);
+                onFavoriteMessage(item);
                 setMessageState(false);
               }}
               style={Styles.settingButton}>
@@ -197,7 +197,7 @@ const ChatComponent = ({
   };
   const postView = () => {
     return (
-      <TouchableWithoutFeedback onPress={() => setpostShowState(false)}>
+      <TouchableWithoutFeedback onPress={() => setPostShowState(false)}>
         <View style={Styles.postContainer}>
           <View style={Styles.postItemsContainer} />
         </View>
@@ -284,14 +284,14 @@ const ChatComponent = ({
       <TouchableWithoutFeedback
         onLongPress={() => {
           setItem(item);
-          setMessageposition('l');
+          setMessagePosition('l');
           setMessageState(!messageState);
         }}
         onPress={() => setMessageState(false)}>
         <View style={Styles.bubbleContainer}>
           <View
             style={[
-              Styles.bubleItemContainer,
+              Styles.bubbleItemContainer,
               {backgroundColor: 'white', marginRight: 10},
             ]}>
             <View style={Styles.flex} />
@@ -304,7 +304,7 @@ const ChatComponent = ({
             {item.documents ? documentView(item) : null}
             {item.video ? videoView(item) : null}
             {item.location ? locationView(item) : null}
-            <Text style={[Styles.bubleText, {color: '#959494'}]}>
+            <Text style={[Styles.bubbleText, {color: '#959494'}]}>
               {item.text}
             </Text>
             {item.quickReplies ? quickRepliesView(item.quickReplies,'left') : null}
@@ -314,7 +314,7 @@ const ChatComponent = ({
               <Text style={[Styles.timeText, {color: '#959494'}]}>
                 {item.createdAt}
               </Text>
-              {item.annoucement ? (
+              {item.announcement ? (
                 <Foundation
                   name={'megaphone'}
                   style={Styles.infoItem}
@@ -340,7 +340,7 @@ const ChatComponent = ({
       <TouchableWithoutFeedback
         onLongPress={() => {
           setItem(item);
-          setMessageposition('r');
+          setMessagePosition('r');
           setMessageState(!messageState);
         }}
         onPress={() => setMessageState(false)}>
@@ -350,7 +350,7 @@ const ChatComponent = ({
           </TouchableWithoutFeedback>
           <View
             style={[
-              Styles.bubleItemContainer,
+              Styles.bubbleItemContainer,
               {backgroundColor: '#1cafff', marginRight: 10},
             ]}>
             {item.transmitted ? (
@@ -374,12 +374,12 @@ const ChatComponent = ({
             {item.documents ? documentView(item) : null}
             {item.video ? videoView(item) : null}
             {item.location ? locationView(item) : null}
-            <Text style={[Styles.bubleText, {color: 'white'}]}>
+            <Text style={[Styles.bubbleText, {color: 'white'}]}>
               {item.text}
             </Text>
             {item.quickReplies ? quickRepliesView(item.quickReplies,'right') : null}
             <View style={Styles.infoContainer}>
-              {item.annoucement ? (
+              {item.announcement ? (
                 <Foundation name={'megaphone'} color={'rgba(0,0,0,.3)'} />
               ) : null}
               {item.favorite ? (
